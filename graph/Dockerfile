@@ -7,7 +7,9 @@ RUN mv plugins /plugins \
 
 RUN apk add --no-cache --quiet \
     bash \
-    curl
+    curl && \
+    apk del make cmake gcc g++ gfortran && \
+    rm -rf /var/cache/apk/*
 
 RUN cd /var/lib/neo4j/plugins \
         && curl --fail --show-error --location --output apoc-all.jar $APOC_URI \
