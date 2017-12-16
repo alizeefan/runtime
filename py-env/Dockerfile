@@ -2,7 +2,9 @@ FROM python:2.7-alpine
 
 RUN apk update 
 RUN apk upgrade
-RUN apk add --update wget ake cmake gcc g++ gfortran parallel python py-pip python-dev bash libstdc++
+RUN apk add --update wget
+RUN apk add --update make cmake gcc g++ gfortran parallel
+RUN apk add --update python py-pip python-dev bash libstdc++
 
 RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
 RUN pip install --no-cache-dir setuptools numpy cython pandas python-constraint py2neo ipython
