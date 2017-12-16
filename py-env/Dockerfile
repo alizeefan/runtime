@@ -2,7 +2,7 @@ FROM python:2.7-alpine
 
 RUN apk update 
 RUN apk upgrade
-RUN apk add --update wget ake
+RUN apk add --update wget
 RUN apk add --update make cmake gcc g++ gfortran parallel
 RUN apk add --update python py-pip python-dev bash libstdc++
 
