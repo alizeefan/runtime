@@ -8,7 +8,6 @@ RUN mv plugins /plugins \
 RUN apk add --no-cache --quiet \
     bash \
     curl && \
-    apk del make cmake gcc g++ gfortran && \
     rm -rf /var/cache/apk/*
 
 RUN cd /var/lib/neo4j/plugins \
