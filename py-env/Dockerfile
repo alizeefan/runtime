@@ -6,7 +6,7 @@ RUN apk update; \
 	rm -rf /var/cache/apk/*
 
 RUN ln -s /usr/include/locale.h /usr/include/xlocale.h
-RUN pip install --no-cache-dir setuptools numpy cython pandas python-constraint py2neo ipython
+RUN pip install --no-cache-dir setuptools numpy cython pandas python-constraint py2neo ipython fix-yahoo-finance pandas-datareader
 
 # TA-Lib
 RUN cd /tmp; \
